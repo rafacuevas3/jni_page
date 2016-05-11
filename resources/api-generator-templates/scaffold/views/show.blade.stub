@@ -1,0 +1,9 @@
+@extends('layout')
+
+@section('panel-heading')
+	<h4 class="text-center">$MODEL_NAME$</h4>
+@endsection
+
+@section('content')
+	@include('$MODEL_NAME_PLURAL_CAMEL$.show_fields')
+@endsection

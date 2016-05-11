@@ -1,0 +1,20 @@
+@extends('layout')
+
+@section('panel-heading')
+	<h4 class="text-center">Registar $MODEL_NAME_CAMEL$</h4>
+@endsection
+
+@section('content')
+	{!! Form::open(['route' => '$MODEL_NAME_PLURAL_CAMEL$.store', 'method' => 'POST']) !!}
+
+        @include('$MODEL_NAME_PLURAL_CAMEL$.fields')
+
+        <div class="row">
+			<div class="col-xs-12 text-center">
+				<button type="submit" class="btn btn-success">Guardar</button>
+				<a class="btn btn-danger" href="{{ url('/$MODEL_NAME_PLURAL_CAMEL$') }}" role="button">Cancelar</a>
+			</div>
+		</div>
+
+    {!! Form::close() !!}
+@endsection
